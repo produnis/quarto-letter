@@ -55,9 +55,7 @@
   let betreff = betreff.replace("~", " ")
   let empfaenger = empfaenger.map(e => e.replace("~", " "))
   
-  // Farben definieren
-  let HSNRblue1 = rgb("185191")
-  let HSNRblue2 = rgb("07A1E2")
+
 
   // blaue Überschriften
 
@@ -83,31 +81,7 @@
   // Link-Farbe
   show link: set text(fill: rgb("185191"))
 
-  // Seitengröße und -ränder festlegen, Faltmarken einfügen
-  set page(
-    paper: paper,
-    margin: (
-        top: mtop,
-        bottom: mbottom,
-        left: mleft,
-        right: mright
-    ),
-    numbering: numbering,
-    number-align: number-align,
-    header: align(center)[#image(logo_path, width: logowidth)],
-    header-ascent: logoascent,
-    footer: align(right)[#text(9pt)[Seite #context counter(page).display("1 von 1", both: true,)]],
-    background: {
-        //  Set A - should be correct?
-        place(top + left, dx: -0cm, line(start: (0%, +10.3cm ), end: (8%, +10.3cm), stroke: (thickness: 0.2pt, paint: black))) 
-        place(top + left, dx: -0cm, line(start: (0%, +15.1cm ), end: (6%, +15.1cm), stroke: (thickness: 0.2pt, paint: black)))
-        place(top + left, dx: -0cm, line(start: (0%, +20.5cm ), end: (8%, +20.5cm), stroke: (thickness: 0.2pt, paint: black)))
-        //  Set B - experimental
-        // place(top + left, dx: -0cm, line(start: (0%, 50mm  ), end: (4%, 50mm), stroke: (thickness: 0.1pt,paint: red)))
-        // place(top + left, dx: -0cm, line(start: (0%, 50%   ), end: (6%, 50%), stroke: (thickness: 0.1pt,paint: red)))
-        // place(top + left, dx: -0cm, line(start: (0%, 155mm ), end: (4%, 155mm), stroke: (thickness: 0.1pt,paint: red)))
-    }
-  )
+
 
   v(15mm) //insgesamt 40mm Abstand vom Rand
   
